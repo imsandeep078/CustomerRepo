@@ -30,6 +30,7 @@ public class CustomerController {
 
 	private static Logger logger = Logger.getLogger("CustomerController");
 
+	// Adding the customer data
 	@PostMapping("/addCustomer")
 	public ResponseEntity<?> addCustomer(@RequestBody @Valid CustomerDetails details) {
 		CustomerDetails result = service.saveCustomer(details);
